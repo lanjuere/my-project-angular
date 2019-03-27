@@ -11,9 +11,16 @@ export class AppComponent  {
 
   constructor(private appService: AppService) { }
 
-  displayValue(){
-    return this.appService.getValue().subscribe(function(result){
-      console.log(result);
-    })
+  callApi(number){
+    var i = 0;
+    for(i = 0; i< number; i++){
+      this.appService.getValue().subscribe(function(result){
+        console.log("résultat composant "+i+" :",result);
+      })
+    }
+  }
+
+  clearCache(){
+    sessionStorage.clear();
   }
 }

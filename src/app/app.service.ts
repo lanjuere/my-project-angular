@@ -10,9 +10,10 @@ export class AppService {
 
   constructor(private httpClient: HttpClient) {}
 
-  @CacheReturnValue("getValue")
+  @CacheReturnValue("key")
   getValue():Observable<any>{
-    return this.httpClient.get<any>("https://opendata.paris.fr/api/records/1.0/search/?dataset=velib-disponibilite-en-temps-reel&facet=overflowactivation&facet=creditcard&facet=kioskstate&facet=station_state");
+  
+    return this.httpClient.get<any>('https://opendata.paris.fr/api/records/1.0/search/?dataset=velib-disponibilite-en-temps-reel&facet=overflowactivation&facet=creditcard&facet=kioskstate&facet=station_state');
   }
 
 
