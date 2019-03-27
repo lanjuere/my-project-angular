@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'my-app',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
+
+  constructor(private appService: AppService) { }
+
+  displayValue(){
+    return this.appService.getValue().subscribe(function(result){
+      console.log(result);
+    })
+  }
 }
