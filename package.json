@@ -20,7 +20,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-worker": "ng run webworker-in-angular6:build-worker",
+    "dev-worker": "ng run webworker-in-angular6:dev-worker"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
