@@ -1,7 +1,13 @@
-<hello name="{{ name }}"></hello>
+<h1>Cache des appels WS </h1>
 <p>
   Regardez le réseau <br/>
+  <input type="number" name="timeout" placeholder="timeout" [(ngModel)]="timeout"><button (click)="changeTimeout()">valider</button><br/>
   <button (click)="callApi(1)">call api</button>
   <button (click)="callApi(3)">call 3 api</button>
-  <button (click)="clearCache()">clear cache</button>
+  <button (click)="clearCacheAndReload()">clear cache & reload </button>
 </p>
+<ul>
+    <li *ngFor="let result of results; index as i">
+      api {{i}} chargée !
+    </li>
+  </ul>
