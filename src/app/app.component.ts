@@ -9,7 +9,7 @@ import { AppService } from './app.service';
 export class AppComponent  {
   name = 'Angular';
   results = [];
-  timeout = 0;
+  timeout;
   TIMEOUT_KEY = "TIMEOUT_KEY";
 
 
